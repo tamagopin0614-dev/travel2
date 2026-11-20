@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>東京2026賞楓之旅</title>
+<style>
+:root{--bg:#faf6ee;--card:#fffdf8;--sand:#efe6d6;--oat:#d9c8aa;--blue:#b9cbd6;--blue2:#7f9bab;--br:#a38465;--dk:#4a3a2c;--line:#e3d8c4;--warn:#b86a3c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#231d17;--card:#2c251e;--sand:#362e25;--oat:#7a664d;--blue:#4d6270;--blue2:#9db6c4;--br:#c4a47f;--dk:#f0e6d6;--line:#463c30;--warn:#e19a6c}}
+:root[data-theme="dark"]{--bg:#231d17;--card:#2c251e;--sand:#362e25;--oat:#7a664d;--blue:#4d6270;--blue2:#9db6c4;--br:#c4a47f;--dk:#f0e6d6;--line:#463c30;--warn:#e19a6c}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--dk);font-family:"Noto Serif TC","Hiragino Mincho ProN","PMingLiU",serif;line-height:1.75;-webkit-text-size-adjust:100%}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:10px 14px;font-size:14px;white-space:nowrap}
+nav a{text-decoration:none;padding:4px 13px;border-radius:99px;color:var(--br)}
+nav a:hover{background:var(--sand)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+.hero{margin:14px auto 0;max-width:880px;min-height:430px;border-radius:28px;position:relative;overflow:hidden;color:#fffaf0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;background:linear-gradient(180deg,#c9d7df 0%,#e8d7bd 38%,#c77d4f 72%,#8a4e32 100%)}
+.hero svg{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero>*{position:relative}
+.hero small{letter-spacing:.35em;font-size:12px;opacity:.9}
+.hero h1{font-size:clamp(34px,9vw,60px);margin:6px 0 4px;font-weight:600;letter-spacing:.12em;text-shadow:0 2px 14px #5a301c66}
+.hero p{margin:0;letter-spacing:.2em}
+h2{font-size:24px;letter-spacing:.14em;font-weight:600;margin:52px 0 6px}
+h2 em{display:block;font-style:normal;font-size:11px;letter-spacing:.4em;color:var(--br);margin-bottom:2px}
+.lead{color:var(--br);margin:0 0 18px}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}
+
+.info div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px}
+.info b{display:block;font-size:11px;letter-spacing:.25em;color:var(--br);font-weight:500}
+.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:640px){.quick{grid-template-columns:repeat(4,1fr)}}
+.quick a{text-decoration:none;border-radius:20px;padding:16px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between;background:var(--sand);border:1px solid var(--line)}
+.quick a:nth-child(2n){background:color-mix(in srgb,var(--blue) 45%,var(--card))}
+.quick span{font-size:11px;letter-spacing:.3em;color:var(--br)}
+.quick strong{font-size:15px;font-weight:600}
+.day{margin-top:56px}
+.dh{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:10px;flex-wrap:wrap}
+.dh .n{font-size:13px;letter-spacing:.3em;color:var(--card);background:var(--br);border-radius:99px;padding:2px 14px}
+.dh h3{margin:0;font-size:22px;font-weight:600}
+.dh span.d{color:var(--br);font-size:14px}
+.tl{position:relative;margin:22px 0 0;padding-left:26px;border-left:1px solid var(--oat)}
+.it{position:relative;margin-bottom:18px;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.it::before{content:"";position:absolute;left:-33px;top:22px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--br)}
+.ph{height:130px;display:flex;align-items:flex-end;justify-content:space-between;padding:10px 14px;color:#fffaf0;font-size:12px;letter-spacing:.2em;position:relative}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,#ffffff40,transparent 50%)}
+.ph b{font-size:34px;font-weight:500;opacity:.55;z-index:1}.ph i{font-style:normal;z-index:1;opacity:.85}
+.g0{background:linear-gradient(135deg,#c98b5b,#8a4e32)}.g1{background:linear-gradient(135deg,#9db6c4,#5f7c8d)}.g2{background:linear-gradient(135deg,#d9c3a0,#a38465)}.g3{background:linear-gradient(135deg,#d6a56a,#b9532e)}.g4{background:linear-gradient(135deg,#6e7f8c,#2f3d4d)}
+.bd{padding:14px 18px 16px}
+.t{font-size:13px;letter-spacing:.15em;color:var(--blue2);font-weight:600}
+.est{font-weight:400;font-size:11px;color:var(--br)}
+.it h4{margin:2px 0 4px;font-size:18px;font-weight:600}
+.it p{margin:4px 0;font-size:14px}
+.meta{font-size:13px;color:var(--br)}
+.btn{display:inline-block;margin:8px 8px 0 0;font-size:13px;text-decoration:none;border:1px solid var(--br);color:var(--br);border-radius:99px;padding:3px 14px}
+.btn:hover{background:var(--br);color:var(--card)}
+.flag{display:inline-block;font-size:12px;color:var(--warn);border:1px solid var(--warn);border-radius:99px;padding:0 10px;margin-left:6px;text-decoration:none}
+.box{border-radius:20px;padding:16px 18px;margin-top:18px;font-size:14px}
+.lb{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;color:#fff;font:700 11px Arial,sans-serif;vertical-align:middle;margin-right:6px}
+.sg{margin-top:14px;padding-top:12px;border-top:1px dashed var(--oat)}
+.sgh{font-size:13px;font-weight:600;margin-bottom:8px}.sgh span{font-weight:400;font-size:11px;color:var(--br);margin-left:8px}
+.ac{border:1px solid var(--line);border-radius:14px;background:var(--bg);margin-bottom:8px;overflow:hidden}
+.ac summary{list-style:none;display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer;flex-wrap:wrap}
+.ac summary::-webkit-details-marker{display:none}
+.ac .num{flex:none;width:22px;height:22px;border-radius:50%;background:var(--blue);color:var(--dk);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ac summary b{font-size:14px;flex:1 1 120px;min-width:0}
+.ac .tg{font-style:normal;font-size:11px;color:var(--blue2);border:1px solid var(--blue);border-radius:6px;padding:0 6px;white-space:nowrap}
+.ac .cv{width:7px;height:7px;border-right:1.5px solid var(--br);border-bottom:1.5px solid var(--br);transform:rotate(45deg);margin:0 4px 3px 2px;transition:transform .2s}
+.ac[open] .cv{transform:rotate(225deg);margin-bottom:-3px}
+.ac-c{padding:0 14px 12px 42px}.ac-c p{font-size:13px!important;color:var(--dk)}.ac-c .meta{color:#7a6a5a}
+@media (prefers-reduced-motion:reduce){.ac .cv{transition:none}}
+.trd{display:block;margin:2px 0 6px}.trd summary{list-style:none;cursor:pointer;display:inline-block;margin:0}.trd summary::-webkit-details-marker{display:none}.trd summary::after{content:' ▾'}.trd[open] summary::after{content:' ▴'}.tbd{font-size:13px;line-height:2;margin-top:6px;padding:6px 12px;background:var(--bg);border:1px solid var(--line);border-radius:12px}
+.trr{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;margin:4px 0;font-size:12.5px}.trd.in{margin:0}.trd.in[open]{flex-basis:100%}.trd.in summary{margin:0}
+.sub{margin-top:12px;padding-top:12px;border-top:1px dashed var(--oat)}.sh{font-size:13px;font-weight:600;margin-bottom:4px}
+.tr1{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.tr1:nth-of-type(4){border-bottom:0}
+.tr1 .lb{width:24px;height:24px;font-size:12px;margin:0;flex:none}.tr1 div{flex:1;min-width:0}.tr1{line-height:1.45}.tr1 b,.box .tr1 b{display:block;font-size:14.5px;font-weight:600;letter-spacing:0;color:var(--dk);margin:0}.tr1 small{font-size:12.5px;color:#7a6a5a}
+.ex{font-size:11px;color:var(--blue2);border:1px solid var(--blue);border-radius:6px;padding:0 6px;white-space:nowrap}
+.tip{margin-top:8px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12.5px;line-height:1.6;display:flex;gap:8px;align-items:flex-start;text-align:left}
+.tip i{font-style:normal;flex:none;font-size:11px;color:var(--dk);background:var(--blue);border-radius:6px;padding:0 6px;margin-top:2px}
+.meta a{color:inherit}
+.rbar{display:flex;align-items:center;gap:6px;margin:2px 0 2px}.rbar .dt{flex:none;width:9px;height:9px;border-radius:50%;border:2px solid var(--br);background:var(--card)}
+.rbar .ln{flex:1;height:0;border-top:2px dotted var(--oat);position:relative}.rbar .ln span{position:absolute;left:50%;top:-11px;transform:translateX(-50%);background:var(--bg);padding:0 6px;font-size:11.5px;color:var(--br);white-space:nowrap}
+.rbl{display:flex;justify-content:space-between;font-size:11.5px;color:#7a6a5a;margin:4px 0 10px}
+.rq{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;margin:6px 0;font-size:12.5px;line-height:1.6}
+.ac-c p b{font-weight:600}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 16px;margin:0 0 18px}
+.rck{font-size:13px;font-weight:600;margin-bottom:8px}
+.rst{position:relative;padding-left:22px;font-size:13.5px;padding-bottom:10px}.rst:last-of-type{padding-bottom:0}
+.rst::before{content:"";position:absolute;left:0;top:5px;width:9px;height:9px;border-radius:50%;border:2px solid var(--br);background:var(--card)}
+.rst::after{content:"";position:absolute;left:4px;top:17px;bottom:-3px;border-left:2px dotted var(--oat)}.rst:last-of-type::after{display:none}
+.rc .btn{margin-top:10px}
+.hotel{background:var(--sand);border:1px solid var(--line)}
+.note{background:var(--sand);border:1px solid var(--line)}
+.tl .box{margin:0 0 18px}
+.box b{letter-spacing:.2em;font-size:12px;color:var(--br);display:block;margin-bottom:4px}
+.box ul{margin:0;padding-left:18px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.tabs button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--card);color:var(--dk);border-radius:99px;padding:5px 16px;cursor:pointer;white-space:nowrap}
+.tabs button.on{background:var(--br);color:var(--card);border-color:var(--br)}
+.fg{display:grid;gap:14px;margin-top:14px}
+@media(min-width:640px){.fg{grid-template-columns:1fr 1fr}}
+.fg .it{margin:0}.fg .it::before{display:none}
+.tag{font-size:11px;letter-spacing:.15em;border-radius:99px;padding:1px 9px;margin-left:6px;vertical-align:middle}
+.pdf{background:var(--blue);color:#33444f}.sug{background:var(--oat);color:#3b2f22}
+.flags .it{border-color:var(--warn)}
+.flags .it::before{display:none}
+.cd{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;letter-spacing:.15em}
+.cd div{background:rgba(222,230,240,.9);color:#4a3a2c;border-radius:16px;padding:6px 0;min-width:62px;text-align:center;line-height:1.25}
+.cd b{display:block;font-size:26px;font-weight:500;letter-spacing:0}
+.cd div span{font-size:11px}
+.fl{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px 18px;margin-bottom:8px}
+.fl .fh{color:var(--br);letter-spacing:.2em;margin-bottom:4px}
+.fr{display:grid;grid-template-columns:1fr 1fr 26px 1fr;align-items:center;gap:6px;padding:14px 0}
+.fr+.fr{border-top:1px dashed var(--line)}
+.fn b{display:block;font-size:19px;letter-spacing:.06em;font-weight:600}
+.fn span{font-size:12px;color:var(--br)}
+.ft span{display:block;font-size:12px;color:var(--br)}
+.ft b{font-size:24px;font-weight:500;letter-spacing:.02em}
+.fr svg{width:26px;height:26px;color:var(--blue2)}
+.il{position:absolute;right:62px;bottom:4px;display:flex;gap:2px;z-index:1;color:rgba(255,250,240,.8)}
+.il svg{width:100px;height:118px;animation:flt 6s ease-in-out infinite}
+.quick a{position:relative;overflow:hidden}
+.qi{position:absolute;right:6px;bottom:4px;width:64px;height:64px;color:var(--br);opacity:.35}
+@keyframes flt{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(1.2deg)}}
+@keyframes bnc{0%{transform:translateY(0)}35%{transform:translateY(-16px)}60%{transform:translateY(0)}78%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+@keyframes drift{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.06) translateY(-6px)}}
+@keyframes fall{0%{transform:translate(0,-30px) rotate(0);opacity:0}10%{opacity:.8}90%{opacity:.7}100%{transform:translate(40px,480px) rotate(300deg);opacity:0}}
+.il svg+svg{animation-delay:-3s}
+.qi{animation:flt 7s ease-in-out infinite}
+.hero>svg{animation:drift 16s ease-in-out infinite alternate}
+.lv{position:absolute;top:-30px;width:26px;height:26px;color:#d98a4e;opacity:0;animation:fall 11s linear infinite;pointer-events:none}
+.lv svg{width:100%;height:100%}
+.l1{left:12%}.l2{left:38%;animation-delay:-4s;color:#e8c36a}.l3{left:64%;animation-delay:-7s}.l4{left:86%;animation-delay:-2s;color:#e8c36a}
+.bounce .dh,.bounce .il svg{animation:bnc .8s cubic-bezier(.3,1.5,.5,1) both}
+.bounce .it:nth-child(2) .il svg{animation-delay:.1s}.bounce .it:nth-child(3) .il svg{animation-delay:.2s}.bounce .it:nth-child(4) .il svg{animation-delay:.3s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.lv{display:none}}
+.ph .il{inset:0;display:flex;align-items:center;justify-content:flex-end;gap:0;overflow:hidden;color:rgba(255,250,240,.36)}
+.ph .il svg{height:130%;width:auto;aspect-ratio:1/1;flex:none}
+.ph .il svg:only-child{height:190%}
+.ph b{color:#3b2a1d;opacity:.8}
+.hero{min-height:0;border-radius:0;overflow:visible;color:var(--dk);display:block;padding:0;background:none;margin:14px auto 0}
+.hero>svg,.hero>.lv{display:none}
+.scene{position:relative;height:250px;border-radius:26px 26px 0 0;overflow:hidden}
+.scene>svg{position:absolute;inset:0;width:100%;height:100%;opacity:1;display:block}
+.tcard{background:var(--card);border:1px solid var(--line);border-top:0;border-radius:0 0 32px 32px;padding:26px 18px 28px;text-align:center}
+.tcard h1{font-size:clamp(30px,8.5vw,50px);margin:0 0 8px;letter-spacing:.1em;text-shadow:none;color:var(--dk)}
+.tcard p{color:var(--br);letter-spacing:.25em;margin:0}
+.tcard .cd{justify-content:center;color:var(--dk)}
+.sl{position:absolute;top:-20px;width:22px;height:22px;opacity:0;pointer-events:none;animation:sfall 10s linear infinite}
+.sl svg{width:100%;height:100%;position:static;display:block}
+.s1{left:15%;color:#c4583a}.s2{left:40%;color:#e8b84a;animation-delay:-4s}.s3{left:65%;color:#d98a4e;animation-delay:-7s}.s4{left:85%;color:#e8b84a;animation-delay:-2s}
+@keyframes sfall{0%{transform:translate(0,-20px) rotate(0);opacity:0}12%{opacity:.85}88%{opacity:.8}100%{transform:translate(36px,270px) rotate(280deg);opacity:0}}
+@keyframes trv{from{transform:translateX(0)}to{transform:translateX(480px)}}
+@keyframes plf{from{transform:translateX(0)}to{transform:translateX(40px)}}
+.tr{animation:trv 22s linear infinite}.pl{animation:plf 16s ease-in-out infinite alternate}
+nav{padding:12px 16px;gap:6px;font-size:16px}
+nav a{padding:8px 18px;color:var(--dk)}
+nav a.on{background:var(--sand)}
+@media (prefers-reduced-motion:reduce){.sl{display:none}}
+.ph{height:130px;background:#f3e7d2;color:#4a3a2c;overflow:hidden}
+.ph::after{display:none}
+.ph i,.ph b{position:relative;z-index:2}
+.ph i{color:#5a4333;opacity:1;background:rgba(255,250,240,.78);padding:0 11px;border-radius:99px;font-size:12px;letter-spacing:.16em;align-self:flex-end}
+.ph b{color:#4a3a2c;opacity:1;background:rgba(255,250,240,.78);padding:0 12px;border-radius:99px;font-size:20px;letter-spacing:.06em;align-self:flex-end}
+.sc{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ob{animation:flt2 6s ease-in-out infinite}
+@keyframes flt2{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.bounce .sc .ob{animation:bnc .8s cubic-bezier(.3,1.5,.5,1) both}
+.ph{height:auto;min-height:0;padding:7px 18px;background:var(--sand);color:var(--dk);border-bottom:1px solid var(--line);align-items:center}
+.it:nth-child(even) .ph{background:color-mix(in srgb,var(--blue) 38%,var(--card))}
+.ph i{background:none;padding:0;color:var(--br);font-size:12px;letter-spacing:.2em;align-self:center}
+.ph b{background:none;padding:0;color:var(--dk);font-size:15px;font-weight:500;letter-spacing:.14em;opacity:.8;align-self:center}
+html{scroll-padding-top:calc(92px + env(safe-area-inset-top,0px))}
+nav{gap:4px;padding:8px 10px;font-size:12px;justify-content:space-around}
+nav a{flex:1 0 auto;min-width:62px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 8px 6px;border-radius:18px;border:2px solid transparent;color:var(--dk);letter-spacing:.06em;line-height:1.3;font-size:12px}
+nav a svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+nav a.on{background:color-mix(in srgb,var(--oat) 55%,var(--card));border-color:var(--br);font-weight:600}
+nav a.on svg{animation:pop .45s ease}
+@keyframes pop{0%{transform:scale(.8)}60%{transform:scale(1.18)}100%{transform:scale(1)}}
+.chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--br);border-radius:99px;padding:3px 6px 3px 14px;font:inherit;font-size:15px;line-height:1.4;background:var(--card);color:var(--dk);cursor:pointer;text-align:left}
+.chip small{font-size:11px;color:var(--br);margin-right:2px}
+.chip .ic{width:26px;height:26px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;flex:none}
+.chip svg{width:18px;height:18px;fill:none;stroke:var(--br);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.chip:active{background:var(--sand)}
+.chips .ar{color:var(--br);font-size:13px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);background:var(--dk);color:var(--bg);border-radius:99px;font-size:13px;padding:8px 18px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:50;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.btn.bs{margin:0 0 0 2px;padding:0 9px;font-size:11px;font-weight:400;vertical-align:middle;letter-spacing:0;white-space:nowrap}
+footer{margin:60px 0 40px;text-align:center;font-size:12px;letter-spacing:.25em;color:var(--br)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="s-tower" viewBox="0 0 100 100"><path fill="currentColor" d="M50 3l2.2 24 8 33L72 97H28l11.8-37 8-33z"/><rect fill="currentColor" x="37" y="46" width="26" height="5" rx="1"/><rect fill="currentColor" x="33" y="64" width="34" height="4" rx="1"/></symbol>
+<symbol id="s-gate" viewBox="0 0 100 100"><path fill="currentColor" d="M6 30Q50 10 94 30l-5 9H11z"/><rect fill="currentColor" x="14" y="42" width="9" height="52"/><rect fill="currentColor" x="77" y="42" width="9" height="52"/><rect fill="currentColor" x="12" y="46" width="76" height="6"/><ellipse fill="currentColor" cx="50" cy="72" rx="13" ry="19"/><path d="M37 72h26M39 63h22M39 81h22" stroke="rgba(0,0,0,.28)" stroke-width="1.5" fill="none"/></symbol>
+<symbol id="s-train" viewBox="0 0 100 100"><path fill="currentColor" d="M4 52Q6 30 30 28H76Q96 30 96 58V70Q96 76 90 76H10Q4 76 4 70z"/><path fill="rgba(0,0,0,.25)" d="M16 40h14v14H16zM36 40h14v14H36zM56 40h14v14H56zM76 40h12v14H76z"/><circle fill="currentColor" cx="24" cy="82" r="6"/><circle fill="currentColor" cx="76" cy="82" r="6"/><path stroke="currentColor" stroke-width="3" d="M0 92H100"/></symbol>
+<symbol id="s-plane" viewBox="0 0 100 100"><path fill="currentColor" d="M96 50L62 42 40 12H30l12 32-26 2-8-10H2l4 14-4 14h6l8-10 26 2-12 32h10l22-30z"/></symbol>
+<symbol id="s-leaf" viewBox="-40 -40 80 80"><path fill="currentColor" d="M0-34 8-18 26-24 20-6 38 0 20 8 24 26 6 20 0 38-6 20-24 26-20 8-38 0-20-6-26-24-8-18z"/></symbol>
+<symbol id="s-ginkgo" viewBox="-40 -40 80 80"><path fill="currentColor" d="M0 36C-8 20-34 8-30-18Q-14-34-3-24L0-20 3-24Q14-34 30-18C34 8 8 20 0 36z"/></symbol>
+<symbol id="s-tree" viewBox="0 0 100 100"><path fill="currentColor" d="M50 4l4 11h11l-9 7 3 11-9-7-9 7 3-11-9-7h11zM50 30l22 28H28zM50 48l30 32H20z"/><rect fill="currentColor" x="45" y="80" width="10" height="14"/></symbol>
+<symbol id="s-tower2" viewBox="0 0 100 100"><g fill="currentColor"><rect x="49" y="1" width="2" height="15"/><path d="M46 16h8l1.5 12h-11z"/><rect x="41" y="28" width="18" height="5" rx="1.5"/><path d="M44 33h12l4 28H40z" opacity=".8"/><rect x="35" y="60" width="30" height="5" rx="1.5"/><path d="M38 65h24l11 31H27z" opacity=".8"/></g><g stroke="rgba(0,0,0,.3)" stroke-width="1.1" fill="none"><path d="M42 47h16M45 38l10 9M55 38l-10 9M33 80h34M38 70l24 10M62 70L38 80M30 90h40M36 80l-6 10M64 80l6 10"/></g><path d="M42 96c0-13 16-13 16 0z" fill="rgba(0,0,0,.3)"/><circle cx="50" cy="2.5" r="2.2" fill="#ffe0a8"/></symbol>
+<symbol id="s-gate2" viewBox="0 0 100 100"><g fill="currentColor"><path d="M4 24Q50 6 96 24l-3 6H7z"/><path d="M10 30h80v8H10z" opacity=".85"/><rect x="14" y="38" width="8" height="54"/><rect x="78" y="38" width="8" height="54"/><rect x="12" y="44" width="76" height="6"/><rect x="26" y="50" width="4" height="30" opacity=".6"/><rect x="70" y="50" width="4" height="30" opacity=".6"/><rect x="44" y="46" width="12" height="4"/><ellipse cx="50" cy="68" rx="14" ry="18"/><rect x="44" y="84" width="12" height="4"/></g><path d="M12 24h76M16 28h68M50 51v34M41 52q-5 16 0 32M59 52q5 16 0 32M36 68h28" stroke="rgba(0,0,0,.3)" stroke-width="1.3" fill="none"/></symbol>
+<symbol id="s-train2" viewBox="0 0 100 100"><path fill="currentColor" d="M3 50Q3 34 18 32H62Q86 34 97 58V68Q97 74 91 74H9Q3 74 3 68z"/><path fill="rgba(0,0,0,.28)" d="M10 40h12v12H10zM26 40h12v12H26zM42 40h12v12H42zM72 42Q82 46 88 56H72z"/><path d="M3 62h94" stroke="rgba(255,255,255,.55)" stroke-width="3"/><rect fill="currentColor" x="38" y="26" width="16" height="4" rx="1"/><circle fill="currentColor" cx="22" cy="80" r="6"/><circle fill="currentColor" cx="38" cy="80" r="6"/><circle fill="currentColor" cx="66" cy="80" r="6"/><circle fill="currentColor" cx="82" cy="80" r="6"/><path stroke="currentColor" stroke-width="2.5" d="M0 90H100M8 90v4M30 90v4M52 90v4M74 90v4M94 90v4"/></symbol>
+<symbol id="s-plane2" viewBox="0 0 100 100"><g fill="currentColor"><path d="M4 56Q8 45 28 45H78Q97 47 97 55Q97 62 78 63H24Q8 63 4 56z"/><path d="M8 47L2 26H13L30 45z"/><path d="M42 58L60 90H72L64 58z" opacity=".85"/><path d="M46 46L58 20H66L62 46z" opacity=".7"/><ellipse cx="54" cy="68" rx="8" ry="3.5" opacity=".6"/></g><g fill="rgba(0,0,0,.3)"><circle cx="30" cy="53" r="1.8"/><circle cx="38" cy="53" r="1.8"/><circle cx="46" cy="53" r="1.8"/><circle cx="54" cy="53" r="1.8"/><circle cx="62" cy="53" r="1.8"/><path d="M82 48Q92 49 94 54H82z"/></g></symbol>
+<symbol id="s-tree2" viewBox="0 0 100 100"><path fill="currentColor" d="M50 2l3.2 8h8.6l-7 5.4 2.8 8.4-7.6-5-7.6 5 2.8-8.4-7-5.4h8.6z"/><path fill="currentColor" d="M50 24l20 26H30zM50 42l27 30H23zM50 60l33 28H17z" opacity=".9"/><rect fill="currentColor" x="45" y="86" width="10" height="10"/><path d="M34 44q16 8 32 0M30 62q20 10 40 0M26 80q24 10 48 0" stroke="rgba(255,255,255,.55)" stroke-width="1.6" fill="none"/><g fill="rgba(255,215,140,.95)"><circle cx="42" cy="50" r="2.4"/><circle cx="58" cy="52" r="2.4"/><circle cx="36" cy="68" r="2.4"/><circle cx="52" cy="70" r="2.4"/><circle cx="66" cy="68" r="2.4"/><circle cx="30" cy="84" r="2.4"/><circle cx="48" cy="86" r="2.4"/><circle cx="70" cy="84" r="2.4"/></g></symbol>
+<symbol id="s-leaf2" viewBox="-40 -40 80 80"><path fill="currentColor" d="M0-34 8-18 26-24 20-6 38 0 20 8 24 26 6 20 0 38-6 20-24 26-20 8-38 0-20-6-26-24-8-18z"/><path d="M0 38V-26M0 10L-22 24M0 10L22 24M0-6L-26 0M0-6L26 0M0-18L-10-22M0-18L10-22" stroke="rgba(0,0,0,.3)" stroke-width="1.3" fill="none"/></symbol>
+<symbol id="s-ginkgo2" viewBox="-40 -40 80 80"><path fill="currentColor" d="M0 34C-8 20-34 8-30-18Q-14-34-3-24L0-20 3-24Q14-34 30-18C34 8 8 20 0 34z"/><path d="M0 40V-20M0 24L-18-8M0 24L18-8M0 24L-8-16M0 24L8-16" stroke="rgba(0,0,0,.28)" stroke-width="1.2" fill="none"/></symbol>
+<symbol id="s-grill" viewBox="0 0 100 100"><path d="M30 30q-7-7 0-13t0-11M50 27q-7-7 0-13t0-11M70 30q-7-7 0-13t0-11" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".55"/><g fill="currentColor"><rect x="10" y="52" width="80" height="6" rx="3"/><rect x="18" y="58" width="5" height="34"/><rect x="77" y="58" width="5" height="34"/><rect x="24" y="38" width="26" height="11" rx="5" transform="rotate(-7 37 43)"/><rect x="52" y="36" width="28" height="11" rx="5" transform="rotate(6 66 41)"/></g><path d="M29 42h16M33 46h12M58 40h18M60 44h14" stroke="rgba(255,255,255,.55)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M30 92c-6-10 3-14 0-24 9 6 12 16 6 24zM48 92c-7-13 4-19 0-31 11 9 14 21 6 31zM66 92c-5-9 2-12 0-20 7 5 9 14 4 20z" fill="#ffd9a6"/><path d="M14 93h72" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+</defs></svg>
+<nav id="top">
+<a href="#guide"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="M12 18.2l-3-3a1.9 1.9 0 0 1 3-2.3 1.9 1.9 0 0 1 3 2.3z"/></svg><span>行程</span></a><a href="#ticket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5V9a3 3 0 0 0 0 6v2.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5V15a3 3 0 0 0 0-6z"/><path d="M14.5 6v2M14.5 11v2M14.5 16v2"/></svg><span>領取門票</span></a><a href="#hotel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V19a1.5 1.5 0 0 0 1.5 1.5h10a1.5 1.5 0 0 0 1.5-1.5V9.5"/><path d="M10 20.5v-5a2 2 0 0 1 4 0v5"/></svg><span>住宿</span></a><a href="#food"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5h17a8.5 7 0 0 1-17 0z"/><path d="M8 20.5h8"/><path d="M8.5 4.5c-1 1 1 2 0 3.2M12 3.5c-1 1 1 2.2 0 3.5M15.5 4.5c-1 1 1 2 0 3.2"/></svg><span>餐廳</span></a><a href="#tax"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9 8l3 4 3-4M9.5 12.2h5M9.5 14.6h5M12 12v5.5"/></svg><span>退稅</span></a>
+</nav>
+
+<header class="hero">
+<svg viewBox="0 0 400 430" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<g fill="#b24a2a" opacity=".55"><path id="lf" d="M0-34 8-18 26-24 20-6 38 0 20 8 24 26 6 20 0 38-6 20-24 26-20 8-38 0-20-6-26-24-8-18z"/></g>
+<use href="#lf" transform="translate(70 90) rotate(15) scale(1.3)" fill="#c9683a" opacity=".6"/>
+<use href="#lf" transform="translate(330 60) rotate(-20) scale(.9)" fill="#d98a4e" opacity=".6"/>
+<use href="#lf" transform="translate(250 170) rotate(40) scale(1.6)" fill="#b24a2a" opacity=".5"/>
+<use href="#lf" transform="translate(40 250) rotate(-10) scale(.8)" fill="#e0a566" opacity=".6"/>
+<use href="#lf" transform="translate(360 280) rotate(25) scale(1.1)" fill="#d98a4e" opacity=".55"/>
+<path d="M-30 430L110 310Q130 300 150 310L290 430z" fill="#fffaf0" opacity=".16"/>
+<use href="#s-tower2" x="262" y="190" width="104" height="190" style="color:#fffaf0" opacity=".55"/>
+<use href="#s-plane2" x="60" y="36" width="46" height="46" style="color:#fffaf0" opacity=".6"/>
+</svg>
+<span class="lv l1"><svg viewBox="-40 -40 80 80"><use href="#s-leaf2"/></svg></span><span class="lv l2"><svg viewBox="-40 -40 80 80"><use href="#s-ginkgo2"/></svg></span><span class="lv l3"><svg viewBox="-40 -40 80 80"><use href="#s-leaf2"/></svg></span><span class="lv l4"><svg viewBox="-40 -40 80 80"><use href="#s-ginkgo2"/></svg></span>
+<div class="scene"><svg viewBox="0 0 400 270" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5c3a3"/><stop offset="1" stop-color="#f8ecd8"/></linearGradient></defs><rect width="400" height="270" fill="url(#sky)"/><circle cx="322" cy="66" r="24" fill="#fbf0d8"/><g fill="#fff8ec" opacity=".85"><ellipse cx="96" cy="64" rx="34" ry="9"/><ellipse cx="250" cy="104" rx="30" ry="7"/><ellipse cx="350" cy="140" rx="22" ry="5"/></g><use class="pl" href="#s-plane2" x="40" y="34" width="44" height="44" style="color:#fffaf0"/><path d="M110 216L214 92L306 216z" fill="#a98f8c"/><path d="M214 92L190 126L203 121L214 136L226 120L239 126z" fill="#fffaf0"/><path d="M222 216L296 128L376 216z" fill="#b99c96"/><path d="M296 128L282 148L292 145L298 154L306 144L316 148z" fill="#fffaf0"/><path d="M0 214Q90 188 180 206T400 200V270H0z" fill="#f3e7d2"/><path d="M0 234Q120 218 230 232T400 226V270H0z" fill="#ead8b8"/><use href="#s-tower2" x="6" y="122" width="92" height="92" style="color:#c4583a"/><g><rect x="141" y="198" width="4" height="16" fill="#8a6a4a"/><ellipse cx="143" cy="189" rx="15" ry="19" fill="#e8b84a"/><rect x="164" y="204" width="3" height="11" fill="#8a6a4a"/><ellipse cx="165.5" cy="198" rx="10" ry="13" fill="#c4583a"/><rect x="328" y="198" width="4" height="16" fill="#8a6a4a"/><ellipse cx="330" cy="189" rx="15" ry="19" fill="#c4583a"/><rect x="352" y="204" width="3" height="11" fill="#8a6a4a"/><ellipse cx="353.5" cy="198" rx="10" ry="13" fill="#e8b84a"/><rect x="372" y="206" width="3" height="9" fill="#8a6a4a"/><ellipse cx="373.5" cy="200" rx="8" ry="11" fill="#e8b84a"/></g><rect y="246" width="400" height="24" fill="#d8c7a8"/><path d="M0 258H400" stroke="#fffaf0" stroke-width="2" stroke-dasharray="14 12"/><g class="tr"><use href="#s-train2" x="-56" y="214" width="46" height="46" style="color:#7a5a46"/></g></svg><span class="sl s1"><svg viewBox="-40 -40 80 80"><use href="#s-leaf2"/></svg></span><span class="sl s2"><svg viewBox="-40 -40 80 80"><use href="#s-ginkgo2"/></svg></span><span class="sl s3"><svg viewBox="-40 -40 80 80"><use href="#s-leaf2"/></svg></span><span class="sl s4"><svg viewBox="-40 -40 80 80"><use href="#s-ginkgo2"/></svg></span></div>
+<div class="tcard">
+<h1>東京2026賞楓之旅</h1>
+<p>2026.12.1 — 2026.12.4</p>
+<div class="cd"><span id="cdl">距離出發</span><div><b id="cdd">--</b><span>天</span></div><div><b id="cdh">--</b><span>時</span></div><div><b id="cdm">--</b><span>分</span></div></div></div>
+</header>
+
+<main class="wrap">
+<h2 id="about"><em>ABOUT</em>四天三夜・東京散步手帳</h2>
+
+<div class="info">
+<div><b>天數</b>4 天 3 夜</div>
+<div><b>住宿</b>東京・淺草東武酒店</div>
+
+
+</div>
+
+<div class="fl"><div class="fh">航班</div>
+<div class="fr"><div class="fn"><b>CX 504</b><span>12/1 去程</span></div><div class="ft"><span>香港 HKG</span><b>09:05</b></div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" transform="rotate(90 12 12)"/></svg><div class="ft"><span>成田 NRT T2</span><b>14:05</b></div></div>
+<div class="fr"><div class="fn"><b>CX 521</b><span>12/4 回程</span></div><div class="ft"><span>成田 NRT T2</span><b>16:50</b></div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" transform="rotate(90 12 12)"/></svg><div class="ft"><span>香港 HKG</span><b>21:10</b></div></div></div>
+
+<h2 id="guide"><em>QUICK GUIDE</em>行程快速導覽</h2>
+<p class="lead">點擊即可跳到當日行程。</p>
+<div class="quick" id="quick"></div>
+
+<div id="days"></div>
+
+<h2 id="ticket"><em>TICKET</em>領取門票</h2>
+<p class="lead">代代木公園燈光秀門票，請到 Lawson 門市內的 Loppi 機器領取。</p>
+<div class="fg" style="grid-template-columns:1fr"><div class="it"><div class="bd">
+<p class="meta" style="margin:0">Booking number</p><p style="font-size:19px;letter-spacing:.1em;margin:0 0 14px"><b>9109460953</b></p>
+<p class="meta" style="margin:0">Telephone number</p><p style="font-size:19px;letter-spacing:.1em;margin:0 0 14px"><b>85294635839</b></p>
+<p class="meta" style="margin:0">Password for My Page login</p><p style="font-size:19px;letter-spacing:.1em;margin:0 0 6px"><b>0811</b></p>
+<a class="btn" target="_blank" rel="noopener" href="https://utravel.com.hk/news/detail/24073/?utm_source=clipboard_share&utm_medium=share&utm_content=ut">領取教學</a>
+</div></div></div>
+
+<h2 id="hotel"><em>STAY</em>住宿資訊</h2>
+<p class="lead">2026.12.1 — 12.4・三晚都住在淺草。</p>
+<div class="fg" style="grid-template-columns:1fr"><div class="it"><div class="ph" id="hph"><i>淺草</i><b>宿</b></div><div class="bd"><h4>淺草東武酒店</h4><p class="meta">所在位置：東京都台東區雷門（淺草駅旁）</p><p class="meta">退房時間：<span>11:00前</span><br>聯絡電話：<a href='tel:+81338430111'>+81338430111</a></p><div class='sub'><div class='sh'>交通資訊</div><div class='tr1'><span class='lb' style='background:#E85298'>A</span><div><b>都營淺草線</b><small>淺草駅</small></div><span class='ex'>A5 出口</span></div><div class='tr1'><span class='lb' style='background:#FF9500'>G</span><div><b>Metro 銀座線</b><small>淺草駅</small></div><span class='ex'>7 號出口</span></div><div class='tr1'><span class='lb' style='background:#0F6CB6;font-size:9px'>TS</span><div><b>東武線</b><small>淺草駅</small></div><span class='ex'>正面口</span></div><div class='tip'><i>電梯</i><span>如果要乘電梯，需要到都營淺草線 A2-b 出口</span></div></div><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=淺草東武酒店">開啟 Google Maps</a></div></div></div>
+
+<h2 id="food"><em>RESTAURANTS</em>餐廳專區</h2>
+<p class="lead">以下是餐廳建議，供參考。</p>
+<div class="tabs" id="ftabs"></div>
+<div class="fg" id="fgrid"></div>
+
+<h2 id="tax"><em>TAX REFUND</em>退稅懶人包</h2>
+<p class="lead">成田機場退稅，三步搞定。</p>
+<div class="fg" style="grid-template-columns:1fr">
+<div class="it"><div class="bd"><div class="t">STEP 1・商店內</div><p>在商店內出示護照辦退稅。店員告訴你要掃收據上的QR code：不理他。把收據保管好。</p></div></div>
+<div class="it"><div class="bd"><div class="t">STEP 2・機場大廳</div><p>不用提早到機場，照你原本的時間即可。到機場大廳，找尋TAXREFUND的牌子，在機器掃護照判定命運的青紅燈。綠燈：過關。可以去航空公司託運行李了。（除非你是退稅大戶，不太可能紅燈要檢查行李）</p></div></div>
+<div class="it"><div class="bd"><div class="t">STEP 3・管制區</div><p>過行李檢查到管制區後，再找一次TAXREFUND的牌子，會有退稅金機台。掃護照，收現金。可以去逛土產店把現金花掉了。</p></div></div>
+</div>
+
+
+<div id="toast" role="status" aria-live="polite"></div>
+<footer>TOKYO 2026 ・ 旅行手帳</footer>
+</main>
+
+<script>
+var G=function(q){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)};
+var D=[
+{n:1,date:"12.1（二）",title:"抵達東京・六本木燈飾",g:0,
+ hp:2,hotel:{name:"淺草東武酒店",addr:"東京都台東區雷門（淺草駅旁）",how:"退房時間：<span>11:00前</span><br>聯絡電話：<a href='tel:+81338430111'>+81338430111</a><br><div class='sub'><div class='sh'>交通資訊</div><div class='tr1'><span class='lb' style='background:#E85298'>A</span><div><b>都營淺草線</b><small>淺草駅</small></div><span class='ex'>A5 出口</span></div><div class='tr1'><span class='lb' style='background:#FF9500'>G</span><div><b>Metro 銀座線</b><small>淺草駅</small></div><span class='ex'>7 號出口</span></div><div class='tr1'><span class='lb' style='background:#0F6CB6;font-size:9px'>TS</span><div><b>東武線</b><small>淺草駅</small></div><span class='ex'>正面口</span></div><div class='tip'><i>電梯</i><span>如果要乘電梯，需要到都營淺草線 A2-b 出口</span></div></div>"},
+ items:[
+ {t:"09:05 起飛",n:"CX504 香港 → 東京",d:"14:05 抵達成田機場（NRT）。",k:"✈"},
+ {t:"抵達後",e:1,n:"成田機場第二航廈 → 淺草",d:"京成 1 號月台（往橙色方向）搭「京成成田 Sky Access 線 Access 特急」，可直接拍卡入閘。Access 特急每小時逢 12 分或 32 分開出，實際班次請到「乘換案內」App 查詢，點站名即可複製。",st:[["出發","空港第2ビル"],["到著","浅草"]],k:"電車"},
+ {t:"19:00（已預約）",n:"焼肉 禄 -ROKU-",d:"*預約確認請查看11月8日11:07AM的郵件“您在「焼肉 禄-ROKU-」的預訂已確認”",q:"焼肉 禄 ROKU 六本木",k:"燒肉",tr:[["#8E9399","H","Metro 日比谷線 六本木駅 2 號出口步行 2 分鐘"],["#CE045B","E","都營大江戶線 六本木駅 4b 出口步行 4 分鐘"]]},
+ {t:"餐後",n:"櫸坂 SNOW & BLUE 燈飾",d:"約 97 萬顆 LED、400 公尺林蔭大道。拍照站位：EMPORIO ARMANI 前或六本木蔦屋書店附近，由坡道上下取景，找與東京鐵塔同框角度。點燈 17:00–22:00。",q:"六本木 櫸坂通り",addr:"東京都港區六本木 6-10-1（六本木之丘）",k:"燈飾"},
+ {t:"接著",n:"West Walk 聖誕樹・毛利庭園燈飾",d:"步行前往欣賞聖誕樹與毛利庭園燈飾。聖誕樹點燈至 24:00，毛利庭園至 23:00。",q:"六本木ヒルズ 毛利庭園",addr:"東京都港區六本木 6-10-1",k:"聖誕燈飾"}],
+ route:["焼肉 禄 ROKU 六本木","六本木 櫸坂通り","六本木ヒルズ 毛利庭園"],ru:"https://maps.app.goo.gl/VHiskSXLs4poLrzr5",rl:"開啟步行路線",
+ notes:[]},
+{n:2,date:"12.2（三）",title:"上野楓葉・Chiikawa 聖誕市集",g:3,
+ hotel:{name:"淺草東武酒店",addr:"同 DAY 1",how:"續住。"},
+ items:[
+ {t:"上午",n:"上野恩賜公園 賞楓＋銀杏",d:"楓葉與銀杏名所，慢慢散步拍照。<br><span class='meta'>交通：請到乘換案內App查看乘車路線，點站名即可複製。</span>",st:[["出發","浅草"],["到著","上野"]],q:"上野恩賜公園",addr:"東京都台東區上野公園",k:"楓葉"},
+ {t:"中午",n:"上野或東京站 午餐・逛街",d:"<span class='meta'>交通：請到乘換案內App查看乘車路線，點站名即可複製。</span>",st:[["出發","上野"],["到著","東京"]],go:"上野・東京站",gl:"餐廳菜式",k:"午餐・逛街"},
+ {t:"15:00出發",e:1,n:"東京站 → 幕張豐砂 <span class='est'>（車程34分鐘）</span>",d:"<span class='meta'>交通：請到乘換案內App查看乘車路線，點站名即可複製。</span>",st:[["出發","東京"],["到著","幕張豊砂"]],k:"電車"},
+ {t:"16:00 入場",n:"Chiikawa 聖誕市集",d:"地點：豐砂公園／永旺購物中心幕張新都心店前。",q:"イオンモール幕張新都心 豊砂公園",addr:"千葉縣千葉市美濱區豊砂 1-1",k:"市集"},
+ {t:"晚餐",n:"幕張豐砂 AEON Mall 內用餐",d:"晚餐直接在商場內解決。",go:"幕張豐砂",k:"晚餐"}],
+ route:["上野恩賜公園","東京駅","幕張豐砂駅","イオンモール幕張新都心"],
+ nrb:1,rs:["上野恩賜公園","東京駅","幕張豐砂駅","イオンモール幕張新都心"],nb:{p:0,t:"建議今天先到Lawson門市內的Loppi機器領取明天代代木燈光秀門票",u:"https://utravel.com.hk/news/detail/24073/?utm_source=clipboard_share&utm_medium=share&utm_content=ut"},
+ notes:[]},
+{n:3,date:"12.3（四）",title:"高輪 Gateway City・代代木燈光秀",g:4,
+ hotel:{name:"淺草東武酒店",addr:"同 DAY 1",how:"續住。"},
+ items:[
+ {t:"白天",n:"高輪 Gateway City 商場",d:"高輪Gateway站周邊新商場，逛街、用餐。 <a class='btn bs' href='#food' onclick=\"show('高輪')\">餐廳建議</a><br><span class='meta'>交通：請到乘換案內App查看乘車路線，點站名即可複製。</span>",st:[["出發","浅草"],["到著","高輪ゲートウェイ"]],k:"商場",sg:[{n:"高空展望台 LUFTBAUM",tg:"景觀",d:"位於 NEWoMAN高輪的THE LINKPILLAR 1 North 28樓，可以遠眺東京市景、翠之庭（戶外花園）園內種有 500 多株植物，包括樹齡達 100 年級別的樹木。",h:"08:00 - 24:00",how:"從高輪 Gateway 站北閘口出閘後，右側建築物「North Tower」內設有直達升降機。",q:"LUFTBAUM 高輪 THE LINKPILLAR 1 North",u:"https://maps.app.goo.gl/RF941wrVs4yvAqBG8?g_st=ic"},{n:"MoN 高輪美術館",tg:"美術館",d:"由隈研吾操刀設計，整體建築充滿了人與自然共生的美學，裡面有大榻榻米休息區、頂樓還有免費足湯可以泡！",h:"10:00 - 21:00",q:"MoN Takanawa 高輪美術館"},{n:"OGAWA COFFEE LABORATORY 高輪 GLT:196",tg:"甜點",d:"完全現打、可以自己選料的義式冰淇淋，口感非常豐富有層次，第一次吃到這麼特別的義式冰淇淋！店鋪位於 MIMURE 二樓角落不起眼還是大排長龍，但完全值得等待！",h:"11:00 - 21:00",q:"OGAWA COFFEE LABORATORY 高輪 GLT:196"}]},
+ {t:"17:30入場",n:"代代木公園燈光秀",d:"",tl:[["#80C241","JY","JR 山手線 原宿駅步行約 3 分鐘"]],st:[["出發","高輪ゲートウェイ"],["到著","原宿"]],q:"代々木公園",u:"https://maps.app.goo.gl/qke4Ha4J2sXui52b7",addr:"東京都澀谷區代代木神園町 2-1（自行車道區域）",k:"燈光秀"}],
+ route:["TAKANAWA GATEWAY CITY","代々木公園"],rt:"高輪 Gateway City → 代々木公園",
+ notes:[],nrb:1},
+{n:4,date:"12.4（五）",title:"淺草散步・返程",g:2,
+ hotel:{name:"退房後前往成田機場",addr:"淺草 → 空港第2ビル",how:"京成 Access 特急（行程資訊見 DAY 1）。"},
+ items:[
+ {t:"上午",n:"淺草酒店附近隨便逛逛",d:"",sgt:"散步景點",k:"淺草",sg:[{n:"淺草寺 雷門",tg:"寺院",hx:"<div class='rbar'><span class='dt'></span><span class='ln'><span>3 分鐘</span></span><span class='dt'></span></div><div class='rbl'><span>酒店</span><span>淺草寺 雷門</span></div>",q:"淺草寺 雷門"},{n:"今戶神社",tg:"神社",hx:"<div class='rbar'><span class='dt'></span><span class='ln'><span>1.3 公里・15–18 分鐘</span></span><span class='dt'></span></div><div class='rbl'><span>淺草寺 雷門</span><span>今戶神社</span></div><div class='rq'>沿隅田川畔河岸道路步行，可看川上風光與晴空塔</div><p><b>招財貓發祥地之一</b>，以「招財貓」與「良緣祈願」聞名，供奉夫妻神，特別靈驗於祈求良緣與幸福婚姻。</p><p>境內有貓咪石像，可買貓造型御守與繪馬。</p>",q:"今戸神社"}]},
+ 
+ {t:"約12:00出發",n:"前往成田機場 T2",d:"<span class='meta'>交通：請到乘換案內App查看乘車路線，點站名即可複製。</span>",st:[["出發","浅草"],["到著","空港第2ビル"]],k:"回程"}],
+ route:["淺草東武酒店","成田空港 第2ターミナル"],rt:"淺草 → 成田空港 第2航廈",nrb:1,nh:1,
+ notes:["如果選擇早些到機場午餐，建議乘搭11:41淺草開出的京成Access特急，12:49到達成田機場第二航廈","唔好唔記得退稅！<br><a class='btn' href='#tax'>成田機場退稅懶人包</a>"]}];
+
+var F={
+"淺草":[{n:"にょろ助 東南屋 浅草店",s:"sug",tg:"鰻魚飯",i:"傳統日式料理餐廳，主打不經蒸製直接烤製的「地燒」鰻魚料理",h:"11:00-15:00、17:00-22:00",c:"",p:"¥4,000起",q:"にょろ助 東南屋 浅草店"},
+ 
+ ],
+"六本木":[{n:"焼肉 禄 -ROKU-",s:"sug",tg:"燒肉",i:"主打嚴選黑毛和牛雌牛，採下單後手工分切（不冷凍）",tr:[["#8E9399","H","Metro 日比谷線 六本木駅 2 號出口步行 2 分鐘"],["#CE045B","E","都營大江戶線 六本木駅 4b 出口步行 4 分鐘"]],h:"17:30 - 04:00",c:"",p:"套餐¥10,000起",q:"焼肉 禄 ROKU 六本木"},
+ ],
+"上野・東京站":[{n:"難波千日前 釜たけうどん",s:"sug",tg:"烏冬",l:"東京站",i:"來自大阪難波的知名烏冬店，主打國產小麥粗麵、現切現煮與無添加化學調味高湯，曾獲食べログ百名店肯定。",h:"約 11:00–23:00",c:"",p:"約 ¥1,000–1,500",a:"東京站八重洲北口改札外・GRANSTA YAEKITA 1F",gu:"https://www.gransta.jp/mall/gransta_yaekita/kamatakeudon/#floormap",q:"難波千日前 釜たけうどん 東京駅 GRANSTA YAEKITA"},
+ {n:"上野 六厘舍",s:"sug",tg:"沾麵",l:"上野",i:"以濃郁的魚介豚骨湯頭與有嚼勁的粗麵條聞名",h:"10:00-23:00",c:"",p:"約 ¥1,000–2,000",a:"上野JR車站「山下口」馬上左轉",q:"六厘舎 上野"}],
+"幕張豐砂":[{n:"AEON Mall 幕張新都心 餐廳街",s:"pdf",h:"約 11:00–22:00",c:"請確認",p:"約 ¥1,000–2,500",r:"商場內各式餐廳／美食廣場",q:"イオンモール幕張新都心 フードコート"}],
+"高輪":[{n:"牛丼 きき屋",s:"sug",tg:"和牛、牛肉飯",l:"高輪",i:"主打以常陸牛、神戸牛等精選 A5 級和牛豪華製作的牛丼。",h:"11:00 - 22:00",c:"",p:"約 ¥3,000起",a:"MIMURE 3樓",al:"位置",q:"牛丼 きき屋 高輪ゲートウェイシティ MIMURE"},
+ {n:"高輪それがし",s:"sug",tg:"日式料理",l:"高輪",i:"午市提供 9 款精緻的 5 道菜定食，包括本吞拿魚散壽司、炭烤銀鱈魚西京燒，以及手工蕎麥麵與甜品等豐富選擇。",h:"11:00 - 15:00",c:"",p:"約 ¥2,000起",a:"LUFTBAUM 28F",al:"位置",q:"高輪それがし LUFTBAUM 高輪ゲートウェイ",u:"https://maps.app.goo.gl/w3o3qHpPQ2rFpUJFA"},
+ {n:"OGAWA COFFEE LABORATORY 高輪 GLT:196",s:"sug",tg:"意式雪糕",l:"高輪",i:"提供以 -196 度液態氮製作的意式雪糕，透過瞬間冷凍突顯食材原有風味，口感細滑。",h:"11:00 - 21:00",c:"",p:"約 ¥1,000",a:"MIMURE 2F",al:"位置",q:"OGAWA COFFEE LABORATORY 高輪 GLT:196",u:"https://maps.app.goo.gl/isALEgVU6TQ5my1e8"}]};
+
+F["幕張豐砂"]=[{n:"金澤まいもん壽司",s:"sug",tg:"迴轉壽司",l:"AEON MALL幕張新都心",i:"每日從金澤港與七尾港（能登半島）直送新鮮漁獲，主打紅喉（のど黒）、富山灣白蝦、甜蝦、松葉蟹與北陸寒鰤等日本海旬味。",h:"11:00 - 21:00",c:"",p:"",a:"Grand Mall 1F [1136-19]",al:"位置",q:"金沢まいもん寿司 イオンモール幕張新都心店"},{n:"紅虎餃子房",s:"sug",tg:"中華料理",l:"AEON MALL幕張新都心",i:"人氣連鎖中華料理品牌，以道地的中華庶民料理、分量十足的點心與重口味調味聞名。招牌必點料理：鐵鍋棒餃子、黑胡麻擔擔麵、黑醋糖醋肉",h:"11:00 - 22:00",c:"",p:"",a:"Grand Mall 2F [1243]",al:"位置",q:"紅虎餃子房 イオンモール幕張新都心店"}];
+function RC(tl,d){if(d.nr||d.route.length<2)return;var o=d.route,u="https://www.google.com/maps/dir/?api=1&travelmode=transit&origin="+encodeURIComponent(o[0])+"&destination="+encodeURIComponent(o[o.length-1])+(o.length>2?"&waypoints="+encodeURIComponent(o.slice(1,-1).join("|")):"");
+ var st=d.rs||(d.rt?d.rt.split(" → "):o);
+ tl.appendChild(el("div","rc","<div class='rck'>當日路線</div>"+st.map(function(t){return "<div class='rst'>"+t+"</div>"}).join("")+(d.nrb?"":"<a class='btn' target='_blank' rel='noopener' href='"+(d.ru||u)+"'>"+(d.rl||"開啟當日路線導航")+"</a>")))}
+function TRB(a,n){return "<details class='trd"+(n?" in":"")+"'><summary class='btn bs'>交通資訊</summary><div class='tbd'>"+a.map(function(t){return "<div><span class='lb' style='background:"+t[0]+"'>"+t[1]+"</span>"+t[2]+"</div>"}).join("")+"</div></details>"}
+var FL=[
+
+
+
+
+
+["f6","12/4 午餐安排","簡報沒有指定鰻魚飯那一天，我先放在 12/4 午餐，花屋敷也列為備選，請確認。"],
+["f7","12/4 離開酒店時間","CX521 16:50 起飛，簡報只寫「午餐後出發」，未列離開時間，建議預留至少 2.5 小時到機場。"],
+["f8","其他","各景點地址為依常見資訊填寫，請用 Google Maps 再確認；網站中的照片區為預留位置（目前環境無法載入外部照片）。"]];
+
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e}
+var SM={"✈":["plane"],"電車":["train"],"東京站":["train"],"淺草":["gate"],"燒肉":["tower"],"燈飾":["tower"],"燈光秀":["tower"],"聖誕燈飾":["tree"],"市集":["tree"],"商場":["tree"],"晚餐":["tree"],"楓葉":["leaf","ginkgo"]};
+var FK={"淺草":["gate"],"六本木":["tower"],"上野・東京站":["train","ginkgo"],"幕張豐砂":["tree"],"高輪":["tower"]};
+SM={"✈":["plane2"],"電車":["train2"],"東京站":["train2"],"淺草":["gate2"],"燒肉":["grill"],"燈飾":["tower2"],"燈光秀":["tower2"],"聖誕燈飾":["tree2"],"市集":["tree2"],"商場":["tree2"],"晚餐":["tree2"],"楓葉":["leaf2","ginkgo2"]};
+FK={"淺草":["gate2"],"六本木":["grill","tower2"],"上野・東京站":["train2","ginkgo2"],"幕張豐砂":["tree2"],"高輪":["tower2"]};
+var RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function bounce(el){if(RM||!el)return;el.classList.remove("bounce");void el.offsetWidth;el.classList.add("bounce");setTimeout(function(){el.classList.remove("bounce")},1000)}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href^='#day']");if(a){var t=document.querySelector(a.getAttribute("href"));setTimeout(function(){bounce(t)},450)}});
+var SK={"✈":"plane","電車":"train","東京站":"train","淺草":"gate","燒肉":"grill","燈飾":"tower","燈光秀":"tower","聖誕燈飾":"tree","市集":"tree","商場":"tree","晚餐":"tree","楓葉":"leaf"};
+var FK2={"淺草":"gate","六本木":"grill","上野・東京站":"train","幕張豐砂":"tree","高輪":"tower"};
+function LB(k){return k==="✈"?"航班":(k||"")}
+function SC(){return ""}
+function IL(a){a=a||["leaf"];return "<span class='il'>"+a.map(function(n){return "<svg viewBox='0 0 100 100'><use href='#s-"+n+"'/></svg>"}).join("")+"</span>"}
+var CPI="<svg viewBox='0 0 24 24' aria-hidden='true'><rect x='8.5' y='8.5' width='11' height='12' rx='3'/><path d='M15.5 8.5V6.5a2.5 2.5 0 0 0-2.5-2.5H7A2.5 2.5 0 0 0 4.5 6.5v8A2.5 2.5 0 0 0 7 17h1.5'/></svg>";
+function STC(a){if(!a)return"";var h="<div class='chips'>";a.forEach(function(x,j){if(j)h+="<span class='ar'>"+(a[j-1][0]==x[0]?"或":"→")+"</span>";h+="<button type='button' class='chip' data-c='"+x[1]+"'><span><small>"+x[0]+"</small> "+x[1]+"</span><span class='ic'>"+CPI+"</span></button>"});return h+"</div>"}
+var tt;function toast(m){var t=document.getElementById("toast");t.textContent=m;t.className="show";clearTimeout(tt);tt=setTimeout(function(){t.className=""},1800)}
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".chip[data-c]");if(!b)return;var v=b.getAttribute("data-c");function ok(){toast("已複製「"+v+"」，到 App 貼上即可")}function fb(){var ta=document.createElement("textarea");ta.value=v;ta.style.cssText="position:fixed;opacity:0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(x){toast("請長按站名手動複製：「"+v+"」")}document.body.removeChild(ta)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok,fb)}else fb()});
+function HB(d){return el("div","box hotel","<b>住宿</b><strong>"+d.hotel.name+"</strong><br>"+d.hotel.addr+"<br>"+d.hotel.how+"<br><a class='btn' target='_blank' rel='noopener' href='"+G(d.hotel.name)+"'>開啟 Google Maps</a>")}
+var q=document.getElementById("quick"),days=document.getElementById("days");
+D.forEach(function(d){
+ var a=el("a","","<span>DAY "+d.n+" ・ "+d.date+"</span><strong>"+d.title+"</strong><svg class='qi' viewBox='0 0 100 100'><use href='#s-"+["tower2","leaf2","tree2","gate2"][d.n-1]+"'/></svg>");a.href="#day"+d.n;q.appendChild(a);
+ var s=el("section","day");s.id="day"+d.n;
+ s.appendChild(el("div","dh","<span class='n'>DAY "+d.n+"</span><h3>"+d.title+"</h3><span class='d'>2026."+d.date+"</span>"));
+ var tl=el("div","tl");
+ RC(tl,d);
+ d.items.forEach(function(i,x){
+  if(d.hp===x)tl.appendChild(HB(d));
+  if(d.nb&&d.nb.p===x)tl.appendChild(el("div","box note","<b>注意事項</b>"+d.nb.t+"<br><a class='btn' href='#ticket'>領取門票資訊</a>"));
+  var c=el("div","it");
+  c.appendChild(el("div","ph","<i>"+LB(i.k)+"</i>"+SC(SK[i.k])+"<b>"+d.n+"-"+(x+1)+"</b>"));
+  var b=el("div","bd");
+  b.innerHTML="<div class='t'>"+i.t+(i.e?" <span class='est'>（建議）</span>":"")+(i.f?"<a class='flag' href='#check'>待確認</a>":"")+"</div><h4>"+i.n+(i.go&&i.gl?" <a class='btn bs' href='#food' onclick=\"show('"+i.go+"')\">"+i.gl+"</a>":"")+"</h4>"+(i.d?"<p>"+i.d+"</p>":"")+(i.tl?"<div class='meta trr'><span>交通：</span>"+TRB(i.tl,1)+"<span>請到乘換案內App查看乘車路線，點站名即可複製。</span></div>":"")+(i.tr?TRB(i.tr):"")+STC(i.st)+(i.bl&&i.sg&&i.q?"<a class='btn' target='_blank' rel='noopener' href='"+(i.u||G(i.q))+"'>"+(i.bl||"開啟 Google Maps")+"</a>".replace("<a class","<a style='margin:6px 0 0' class"):"")+(i.sg?"<div class='sg'><div class='sgh'>"+(i.sgt||"順遊建議")+"<span>點開看詳情</span></div>"+i.sg.map(function(g,n){return "<details class='ac'><summary><span class='num'>"+(n+1)+"</span><b>"+g.n+"</b><em class='tg'>"+g.tg+"</em><i class='cv'></i></summary><div class='ac-c'>"+(g.hx||"")+(g.d?"<p>"+g.d+"</p>":"")+(g.x?g.x.map(function(y){return "<p class='meta'>"+y[0]+"：<span>"+y[1]+"</span></p>"}).join(""):"")+(g.h?"<p class='meta'>開放時間：<span>"+g.h+"</span></p>":"")+(g.how?"<p class='meta'>前往方法：<span>"+g.how+"</span></p>":"")+"<a class='btn' target='_blank' rel='noopener' href='"+(g.u||G(g.q))+"'>"+(g.bl||"開啟 Google Maps")+"</a></div></details>"}).join("")+"</div>":"")+(i.addr?"<p class='meta'>地址：<span>"+i.addr+"</span></p>":"")+(i.q&&!(i.bl&&i.sg)?"<a class='btn' target='_blank' rel='noopener' href='"+(i.u||G(i.q))+"'>"+(i.bl||"開啟 Google Maps")+"</a>":"")+(i.go&&!i.gl?"<a class='btn' href='#food' onclick=\"show('"+i.go+"')\">"+(i.gl||"商場餐廳推薦")+"</a>":"");
+  c.appendChild(b);tl.appendChild(c)});
+ s.appendChild(tl);
+ if(d.hp==null&&!d.nh)s.appendChild(el("div","box hotel","<b>住宿</b><strong>"+d.hotel.name+"</strong><br>"+d.hotel.addr+"<br>"+d.hotel.how+(d.n==4?"<br><a class='btn' target='_blank' rel='noopener' href='"+G(d.hotel.name)+"'>開啟 Google Maps</a>":"<br><a class='btn' href='#hotel'>住宿交通資訊</a>")));
+ if(d.notes.length)s.appendChild(el("div","box note","<b>注意事項</b><ul>"+d.notes.map(function(n){return"<li>"+n+"</li>"}).join("")+"</ul>"));
+ days.appendChild(s)});
+
+var tabs=document.getElementById("ftabs"),grid=document.getElementById("fgrid");
+function show(k){
+ [].forEach.call(tabs.children,function(b){b.className=b.textContent===k?"on":""});
+ grid.innerHTML="";
+ F[k].forEach(function(r,x){
+  var c=el("div","it");
+  c.appendChild(el("div","ph","<i>"+(r.l||k)+"</i>"+SC(FK2[k])+"<b>食</b>"));
+  c.appendChild(el("div","bd","<h4>"+r.n+(r.s=="none"?"":"<span class='tag "+r.s+"'>"+(r.tg||(r.s=="pdf"?"PDF":"補充"))+"</span>")+"</h4><p class='meta'>營業時間：<span>"+r.h+"</span>"+(r.c?"<br>公休日："+r.c:"")+""+(r.p?"<br>價格：<span>"+r.p+"</span>":"")+(r.a?"<br>"+(r.al||"地址")+"：<span>"+r.a+"</span>"+(r.gu?" <a class='btn bs' target='_blank' rel='noopener' href='"+r.gu+"'>位置指南</a>":""):"")+"</p>"+(r.i?"<p>"+r.i+"</p>":"")+(r.tr?TRB(r.tr):"")+(r.r?"<p>菜式：<span>"+r.r+"</span></p>":"")+"<a class='btn' target='_blank' rel='noopener' href='"+(r.u||G(r.q))+"'>開啟 Google Maps</a>"))
+  grid.appendChild(c)})}
+Object.keys(F).forEach(function(k){var b=el("button","",k);b.onclick=function(){show(k);bounce(grid)};tabs.appendChild(b)});
+show("淺草");
+document.getElementById("hph").insertAdjacentHTML("afterbegin",SC("gate"));
+
+(function(){var ids=["guide","days","ticket","hotel","food","tax"],nav=document.getElementById("top");function on(id){if(id=="days")id="guide";[].forEach.call(nav.children,function(a){a.className=a.getAttribute("href")=="#"+id?"on":""})}on("guide");var lock=0,tk=0;function upd(){if(lock)return;var cur="guide";["guide","ticket","hotel","food","tax"].forEach(function(i){var t=document.getElementById(i);if(t&&t.getBoundingClientRect().top<=140)cur=i});if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)cur="tax";on(cur)}window.addEventListener("scroll",function(){if(!tk){tk=1;requestAnimationFrame(function(){tk=0;upd()})}},{passive:true});nav.addEventListener("click",function(e){var a=e.target.closest("a");if(a){on(a.getAttribute("href").slice(1));lock=1;setTimeout(function(){lock=0;upd()},1000)}})})();
+(function(){var T=new Date("2026-12-01T09:05:00+08:00");function tick(){var ms=T-new Date(),s=Math.max(0,Math.floor(ms/60000));document.getElementById("cdd").textContent=Math.floor(s/1440);document.getElementById("cdh").textContent=Math.floor(s%1440/60);document.getElementById("cdm").textContent=s%60;if(ms<=0)document.getElementById("cdl").textContent="旅程已出發"}tick();setInterval(tick,30000)})();
+var fl=document.createElement("div");
+FL.forEach(function(f){var c=el("div","it");c.id=f[0];c.appendChild(el("div","bd","<div class='t' style='color:var(--warn)'>⚠ "+f[1]+"</div><p>"+f[2]+"</p>"));fl.appendChild(c)});
+</script>
+</body>
+</html>
